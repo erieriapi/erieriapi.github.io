@@ -1,0 +1,241 @@
+{
+  "info": {
+    "_postman_id": "22a68b54-c833-4fe2-943c-d8353ea66ae9",
+    "name": "ERI API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "27212645",
+    "_collection_link": "https://go.postman.co/collection/27212645-22a68b54-c833-4fe2-943c-d8353ea66ae9?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GetToken",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{stage_api_key}}"
+          }
+        ],
+        "url": {
+          "raw": "https://{{stage.domain}}/auth/gettoken",
+          "protocol": "https",
+          "host": [
+            "{{stage.domain}}"
+          ],
+          "path": [
+            "auth",
+            "gettoken"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Market Data",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{access_token}}"
+          },
+          {
+            "key": "x-api-key",
+            "value": "{{stage_api_key}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"jobTitles\": [\r\n        \"Helper Production\",\r\n        \"Blue Collar Worker\",\r\n        \"Machine Operator\"\r\n    ],\r\n    \"cityStates\": [\r\n        \"Akashi, Japan\"\r\n    ],\r\n    \"compensationTypes\": [\r\n        \"salary\"\r\n    ],\r\n    \"payPeriod\": \"annual\",\r\n    \"planningDate\": \"4/1/2026\",\r\n    \"esic\": \"1000\",\r\n    \"percentiles\": [\r\n        \"25\",\r\n        \"Median\",\r\n        \"75\"\r\n    ],\r\n    \"experienceLevels\": [\r\n        \"1\"\r\n    ],\r\n    \"companySizes\": [\r\n        \"1000000\"\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://{{stage.domain}}/marketdata/getreport",
+          "protocol": "https",
+          "host": [
+            "{{stage.domain}}"
+          ],
+          "path": [
+            "marketdata",
+            "getreport"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Market Data",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"jobTitles\": [\r\n        \"Fast Food Worker\"\r\n    ],\r\n    \"cityStates\": [\r\n        \"Los Angeles, CA\"\r\n    ],\r\n    \"compensationTypes\": [\r\n        \"salary\"\r\n    ],\r\n    \"payPeriod\": \"annual\",\r\n    \"planningDate\": \"4/1/2026\",\r\n    \"esic\": \"1000\",\r\n    \"percentiles\": [\r\n        \"25\",\r\n        \"Median\",\r\n        \"75\"\r\n    ],\r\n    \"experienceLevels\": [\r\n        \"1\",\r\n        \"Level 1\"\r\n    ],\r\n    \"companySizes\": [\r\n        \"1000000\"\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://{{aws.dev.domain}}/marketdata/getreport",
+              "protocol": "https",
+              "host": [
+                "{{aws.dev.domain}}"
+              ],
+              "path": [
+                "marketdata",
+                "getreport"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "Server",
+              "value": "Microsoft-IIS/10.0"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "ASP.NET"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 11 Feb 2026 21:52:32 GMT"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"percentiles\": [\n        {\n            \"index\": 0,\n            \"label\": \"25\"\n        },\n        {\n            \"index\": 1,\n            \"label\": \"Median\"\n        },\n        {\n            \"index\": 2,\n            \"label\": \"75\"\n        }\n    ],\n    \"data\": [\n        {\n            \"jobName\": \"Fast Food Worker\",\n            \"areaName\": \"Los Angeles, California\",\n            \"compensationType\": \"Salary\",\n            \"analysisTypeLabel\": \"Experience\",\n            \"analysisTypeValue\": \"1\",\n            \"values\": [\n                {\n                    \"index\": 0,\n                    \"value\": 40330\n                },\n                {\n                    \"index\": 1,\n                    \"value\": 41103\n                },\n                {\n                    \"index\": 2,\n                    \"value\": 42533\n                }\n            ]\n        },\n        {\n            \"jobName\": \"Fast Food Worker\",\n            \"areaName\": \"Los Angeles, California\",\n            \"compensationType\": \"Salary\",\n            \"analysisTypeLabel\": \"Level\",\n            \"analysisTypeValue\": \"1\",\n            \"values\": [\n                {\n                    \"index\": 0,\n                    \"value\": 40811\n                },\n                {\n                    \"index\": 1,\n                    \"value\": 41516\n                },\n                {\n                    \"index\": 2,\n                    \"value\": 42928\n                }\n            ]\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Cost of Labor",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{access_token}}"
+          },
+          {
+            "key": "x-api-key",
+            "value": "{{api_key}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"baseCityState\": \"Toronto, ON\",\r\n    \"baseCurrencyIsoCode\": \"USD\",\r\n    \"displayType\": \"salary\",\r\n    \"cityStates\": [\"Los Angeles, CA\"],\r\n    \"salaryLevels\": [40000,48000,72000],\r\n    \"payPeriod\": \"annual\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://{{production.domain}}/costoflabor/getreport",
+          "protocol": "https",
+          "host": [
+            "{{production.domain}}"
+          ],
+          "path": [
+            "costoflabor",
+            "getreport"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Market Data",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"jobTitles\": [\r\n        \"Fast Food Worker\"\r\n    ],\r\n    \"cityStates\": [\r\n        \"Los Angeles, CA\"\r\n    ],\r\n    \"compensationTypes\": [\r\n        \"salary\"\r\n    ],\r\n    \"payPeriod\": \"annual\",\r\n    \"planningDate\": \"4/1/2026\",\r\n    \"esic\": \"1000\",\r\n    \"percentiles\": [\r\n        \"25\",\r\n        \"Median\",\r\n        \"75\"\r\n    ],\r\n    \"experienceLevels\": [\r\n        \"1\",\r\n        \"Level 1\"\r\n    ],\r\n    \"companySizes\": [\r\n        \"1000000\"\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://{{domain}}/marketdata/getreport",
+              "protocol": "https",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "marketdata",
+                "getreport"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked",
+              "uuid": "d0976a95-50d0-4fda-95e0-f05d96a70a58"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8",
+              "uuid": "fee8f63b-976e-4115-b586-ec3c15dd6ab3"
+            },
+            {
+              "key": "Server",
+              "value": "Microsoft-IIS/10.0",
+              "uuid": "321c29f8-9df7-4011-8c19-2aa353fd10fc"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "ASP.NET",
+              "uuid": "8f21e65b-0b55-4aa2-a5e1-ed71bf1384ef"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 11 Feb 2026 21:52:32 GMT",
+              "uuid": "7878a79f-97c7-4ce5-afa9-19e7b11c3666"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"percentiles\": [\n        {\n            \"index\": 0,\n            \"label\": \"25\"\n        },\n        {\n            \"index\": 1,\n            \"label\": \"Median\"\n        },\n        {\n            \"index\": 2,\n            \"label\": \"75\"\n        }\n    ],\n    \"data\": [\n        {\n            \"jobName\": \"Fast Food Worker\",\n            \"areaName\": \"Los Angeles, California\",\n            \"compensationType\": \"Salary\",\n            \"analysisTypeLabel\": \"Experience\",\n            \"analysisTypeValue\": \"1\",\n            \"values\": [\n                {\n                    \"index\": 0,\n                    \"value\": 40330\n                },\n                {\n                    \"index\": 1,\n                    \"value\": 41103\n                },\n                {\n                    \"index\": 2,\n                    \"value\": 42533\n                }\n            ]\n        },\n        {\n            \"jobName\": \"Fast Food Worker\",\n            \"areaName\": \"Los Angeles, California\",\n            \"compensationType\": \"Salary\",\n            \"analysisTypeLabel\": \"Level\",\n            \"analysisTypeValue\": \"1\",\n            \"values\": [\n                {\n                    \"index\": 0,\n                    \"value\": 40811\n                },\n                {\n                    \"index\": 1,\n                    \"value\": 41516\n                },\n                {\n                    \"index\": 2,\n                    \"value\": 42928\n                }\n            ]\n        }\n    ]\n}"
+        }
+      ]
+    }
+  ]
+}
