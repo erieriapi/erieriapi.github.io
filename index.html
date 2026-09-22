@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>API Reference</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://googleapis.com|Roboto:300,400,700" rel="stylesheet">
-    <style>body { margin: 0; padding: 0; }</style>
+    <link rel="stylesheet" href="https://unpkg.com" />
   </head>
   <body>
-    <!-- This renders your single-page reference sheet automatically -->
-    <redoc spec-url='eri_open_api.json'></redoc>
-    <script src="https://redoc.ly"> </script>
+    <div id="swagger-ui"></div>
+    <script src="https://unpkg.com" charset="UTF-8"></script>
+    <script>
+      window.onload = () => {
+        window.ui = SwaggerUIBundle({
+          url: 'eri_open_api.json', // Points to your uploaded file
+          dom_id: '#swagger-ui',
+          deepLinking: true,
+          presets: [SwaggerUIBundle.presets.apis]
+        });
+      };
+    </script>
   </body>
 </html>
