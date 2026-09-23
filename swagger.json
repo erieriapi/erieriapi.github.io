@@ -113,7 +113,17 @@
     }
   },
   "components": {
-    "schemas": {},
-    "securitySchemes": {}
+  "schemas": {},
+  "securitySchemes": {
+    "ApiKeyAuth": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-API-KEY" 
+    },
+    "BearerAuth": {
+      "type": "http",
+      "scheme": "bearer"
+    }
   }
+ }
 }
