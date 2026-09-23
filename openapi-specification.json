@@ -1,0 +1,119 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "ERI API",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "servers": [],
+  "paths": {
+    "/auth/gettoken": {
+      "post": {
+        "tags": [
+          "GetToken"
+        ],
+        "summary": "GetToken",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/marketdata/getreport": {
+      "post": {
+        "tags": [
+          "Market Data"
+        ],
+        "summary": "Market Data",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "jobTitles": [
+                    "Helper Production",
+                    "Blue Collar Worker",
+                    "Machine Operator"
+                  ],
+                  "cityStates": [
+                    "Akashi, Japan"
+                  ],
+                  "compensationTypes": [
+                    "salary"
+                  ],
+                  "payPeriod": "annual",
+                  "planningDate": "4/1/2026",
+                  "esic": "1000",
+                  "percentiles": [
+                    "25",
+                    "Median",
+                    "75"
+                  ],
+                  "experienceLevels": [
+                    "1"
+                  ],
+                  "companySizes": [
+                    "1000000"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/costoflabor/getreport": {
+      "post": {
+        "tags": [
+          "Cost of Labor"
+        ],
+        "summary": "Cost of Labor",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "baseCityState": "Toronto, ON",
+                  "baseCurrencyIsoCode": "USD",
+                  "displayType": "salary",
+                  "cityStates": [
+                    "Los Angeles, CA"
+                  ],
+                  "salaryLevels": [
+                    40000,
+                    48000,
+                    72000
+                  ],
+                  "payPeriod": "annual"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {},
+    "securitySchemes": {}
+  }
+}
