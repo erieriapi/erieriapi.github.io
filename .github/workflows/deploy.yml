@@ -38,7 +38,7 @@ jobs:
           POSTMAN_API_KEY: ${{ secrets.POSTMAN_API_KEY }}
         run: |
           # REPLACE <YOUR_COLLECTION_ID> WITH YOUR ACTUAL POSTMAN ID
-          curl -X GET "https://getpostman.com<58448502-14331783-a3b4-4a78-a1c3-9f7b173fc3bd>?format=openapi>" \
+          curl -X GET "https://getpostman.com<58448502-14331783-a3b4-4a78-a1c3-9f7b173fc3bd>?format=openapi" \
             -H "X-Api-Key: $POSTMAN_API_KEY" \
             -o dist/openapi.json
 
