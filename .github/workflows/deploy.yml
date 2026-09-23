@@ -40,7 +40,7 @@ jobs:
           # REPLACE <YOUR_COLLECTION_ID> WITH YOUR ACTUAL POSTMAN ID
           curl -X GET "https://getpostman.com" \
             -H "X-Api-Key: $POSTMAN_API_KEY" \
-            -o dist/openapi.json
+            -o dist/swagger.json
 
       - name: Move existing index.html to Build Directory
         run: |
