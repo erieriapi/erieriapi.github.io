@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>API Documentation</title>
 
   <link
     rel="stylesheet"
-    href="https://unpkg.com"/>
-</head>
-
-<body>
+    href="https://unpkg.com/swagger-uibody>
   <div id="swagger-ui"></div>
 
-  <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
-  <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-standalone-preset.js"></script>
+  <script src="https://unpkg.i-dist@5.29.5/swagger-ui-bundle.jsscript>
+  <script/unpkg.com/swagger-ui-dist@5.29.5/swagger-ui-standalone-preset.jsscript>
 
-    window.ui = SwaggerUIBundle({
-        url: './swagger.json',
-        dom_id: '#swagger-ui',
+  <script>
+    window.onload = () => {
+      SwaggerUIBundle({
+        url: "./swagger.json",
+        dom_id: "#swagger-ui",
         presets: [
           SwaggerUIBundle.presets.apis,
           SwaggerUIStandalonePreset
         ],
-        layout: 'StandaloneLayout'
+        layout: "StandaloneLayout"
       });
     };
   </script>
