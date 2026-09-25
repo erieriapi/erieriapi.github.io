@@ -14,10 +14,19 @@
         ],
         "summary": "GetToken",
         "description": "",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "X-API-KEY",
+            "in": :"header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
-            "description": "Successful response"
+            "description": "Token generated"
           }
         }
       }
@@ -29,7 +38,21 @@
         ],
         "summary": "Market Data",
         "description": "",
-        "parameters": [],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "X-API-KEY",
+            "in": :"header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Successful response"
@@ -80,7 +103,21 @@
         ],
         "summary": "Cost of Labor",
         "description": "",
-        "parameters": [],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "X-API-KEY",
+            "in": :"header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Successful response"
@@ -115,14 +152,10 @@
   "components": {
   "schemas": {},
   "securitySchemes": {
-    "ApiKeyAuth": {
-      "type": "apiKey",
-      "in": "header",
-      "name": "X-API-KEY" 
-    },
     "BearerAuth": {
       "type": "http",
-      "scheme": "bearer"
+      "scheme": "bearer",
+      "bearerFormat": "JWT"
     }
   }
  }
