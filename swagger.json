@@ -5,7 +5,20 @@
     "description": "",
     "version": "1.0.0"
   },
-  "servers": [],
+  "servers": [
+    {
+      "url": "https://dev-api.yourdomain.com",
+      "description": "Development"
+    },
+    {
+      "url": "https://stage-api.yourdomain.com",
+      "description": "Staging"
+    },
+    {
+      "url": "https://api.yourdomain.com",
+      "description": "Production"
+    }
+  ],
   "paths": {
     "/auth/gettoken": {
       "post": {
