@@ -7,11 +7,11 @@
   },
   "servers": [
     {
-      "url": "https://dev-api.yourdomain.com",
+      "url": "https://dev.assessors-api.erieri.com",
       "description": "Development"
     },
     {
-      "url": "https://stage-api.yourdomain.com",
+      "url": "https://stage.assessors-api.erieri.com",
       "description": "Staging"
     },
     {
