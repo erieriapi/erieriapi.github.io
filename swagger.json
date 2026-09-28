@@ -15,7 +15,7 @@
       "description": "Staging"
     },
     {
-      "url": "https://compensation.erieri.com/",
+      "url": "https://assessors-api.erieri.com",
       "description": "Production"
     }
   ],
