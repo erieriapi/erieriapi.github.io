@@ -10,7 +10,40 @@
 </head>
 
 <body>
+  <details style="margin:20px;">
+    <summary><strong>Usage Limits</strong></summary>
 
+    <p>
+      API access is governed by subscription-based usage tiers. Usage is calculated as:
+    </p>
+
+    <p>
+      <strong>Unique Job IDs × Unique Area IDs</strong>
+    </p>
+
+    <p>
+      Each job and area successfully accessed is stored and may be reused in future requests without increasing usage. New Job IDs and Area IDs are added to a user's usage profile only after salary data has been successfully returned.
+    </p>
+
+    <h3>Available Tiers</h3>
+
+    <ul>
+      <li><strong>2.5K</strong> - Up to 2,500 Job × Area combinations</li>
+      <li><strong>25K</strong> - Up to 25,000 Job × Area combinations</li>
+      <li><strong>250K</strong> - Up to 250,000 Job × Area combinations</li>
+    </ul>
+
+    <h3>Important Notes</h3>
+
+    <ul>
+      <li>Usage is tracked across all API keys associated with the same account.</li>
+      <li>Only jobs and areas available under the customer's subscription may be accessed.</li>
+      <li>Usage allocations are not automatically reset.</li>
+      <li>Invalid or unmatched Job IDs and Area IDs will return appropriate error messages.</li>
+      <li>Once the usage limit is reached, additional Job IDs or Area IDs may be restricted until the account usage profile is reset.</li>
+    </ul>
+  </details>
+  
   <div id="swagger-ui"></div>
 
   <script src="https://unpkg.com/swagger-ui-dist@5.29.5/swagger-ui-bundle.js"></script>
