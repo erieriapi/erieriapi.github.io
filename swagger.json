@@ -7,14 +7,6 @@
   },
   "servers": [
     {
-      "url": "https://dev.assessors-api.erieri.com",
-      "description": "Development"
-    },
-    {
-      "url": "https://stage.assessors-api.erieri.com",
-      "description": "Staging"
-    },
-    {
       "url": "https://assessors-api.erieri.com",
       "description": "Production"
     }
