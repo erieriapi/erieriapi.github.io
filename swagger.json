@@ -68,6 +68,33 @@
             "application/json": {
               "schema": {
                 "type": "object",
+                "properties": {
+          "jobTitles": {
+            "type": "array",
+            "description": "an array of ERI job title strings (max 5 jobs)",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cityStates": {
+            "type": "array",
+            "description": " an array of ERI “City, States” (max 5 areas) ",
+            "items": {
+              "type": "string"
+            }
+          },
+          "compensationTypes": {
+            "type": "array",
+            "description": " an array of ERI compensation types: Salary, Incentive, TotalCash",
+            "items": {
+              "type": "string"
+            }
+          },
+          "payPeriod": {
+            "type": "string",
+            "description": " the pay period desired: Annual, Monthly, SemiMonthly, Weekly, Hourly"
+          }
+        },
                 "example": {
                   "jobTitles": [
                     "Helper Production",
