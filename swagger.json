@@ -101,7 +101,9 @@
             "type": "string",
             "description": "the pay period desired: Annual, Monthly, SemiMonthly, Weekly, Hourly"
           },
-          "dataAsOfDate": "ERI data release date"
+          "dataAsOfDate": {
+            "type": "string",
+            "description": "ERI data release date"
         },
                 "example": {
                   "jobTitles": [
