@@ -68,7 +68,7 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "properties": {
+      "properties": {
           "jobTitles": {
             "type": "array",
             "description": "an array of ERI job title strings (max 5 jobs)",
@@ -104,7 +104,8 @@
           "dataAsOfDate": {
             "type": "string",
             "description": "ERI data release date"
-        }}}
+          }
+        },
                 "example": {
                   "jobTitles": [
                     "Helper Production",
