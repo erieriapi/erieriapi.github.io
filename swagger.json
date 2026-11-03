@@ -104,7 +104,7 @@
           "dataAsOfDate": {
             "type": "string",
             "description": "ERI data release date"
-        },
+        }}}
                 "example": {
                   "jobTitles": [
                     "Helper Production",
