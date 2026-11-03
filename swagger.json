@@ -78,30 +78,30 @@
           },
           "cityStates": {
             "type": "array",
-            "description": " an array of ERI “City, States” (max sum of 5 cityStates and postalCodes) ",
+            "description": "an array of ERI “City, States” (max sum of 5 cityStates and postalCodes) ",
             "items": {
               "type": "string"
             }
           },
           "postalCodes": {
             "type": "array",
-            "description": " an array of postal/zip codes (max sum of 5 cityStates and postalCodes) ",
+            "description": "an array of postal/zip codes (max sum of 5 cityStates and postalCodes) ",
             "items": {
               "type": "string"
             }
           },
           "compensationTypes": {
             "type": "array",
-            "description": " an array of ERI compensation types: Salary, Incentive, TotalCash",
+            "description": "an array of ERI compensation types: Salary, Incentive, TotalCash",
             "items": {
               "type": "string"
             }
           },
           "payPeriod": {
             "type": "string",
-            "description": " the pay period desired: Annual, Monthly, SemiMonthly, Weekly, Hourly"
+            "description": "the pay period desired: Annual, Monthly, SemiMonthly, Weekly, Hourly"
           },
-          "dataAsOfDate": ERI data release date. 
+          "dataAsOfDate": "ERI data release date"
         },
                 "example": {
                   "jobTitles": [
