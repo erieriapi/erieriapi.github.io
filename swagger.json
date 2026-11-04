@@ -32,7 +32,9 @@
         "responses": {
           "200": {
             "description": "Token generated"
-          }
+          },
+          "CORS": {
+            "description": "CORS Network failure - Please reach out to ERI"
         }
       }
     },
