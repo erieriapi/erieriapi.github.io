@@ -113,8 +113,13 @@
                     "Machine Operator"
                   ],
                   "cityStates": [
-                    "Akashi, Japan"
+                    "Irvine, California",
+                    "Anaheim, California"
                   ],
+                  "postalCodes": [
+                    "92618",
+                    "92802"
+                  ]
                   "compensationTypes": [
                     "salary"
                   ],
