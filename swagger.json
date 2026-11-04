@@ -37,6 +37,7 @@
             "description": "CORS Network failure - Please reach out to ERI"
         }
       }
+      }
     },
     "/marketdata/getreport": {
       "post": {
