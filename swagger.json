@@ -33,7 +33,7 @@
           "200": {
             "description": "Token generated"
           },
-          "CORS": {
+          "401": {
             "description": "CORS Network failure - Please reach out to ERI"
          }
       }
