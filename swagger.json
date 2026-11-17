@@ -107,7 +107,10 @@
           "dataAsOfDate": {
             "type": "string",
             "description": "ERI data release date"
-          }
+          },
+          "includeJobDescriptions": {
+            "type": "string",
+            "description": "Using this property allows pulling in Job Descriptions"
         },
                 "example": {
                   "jobTitles": [
