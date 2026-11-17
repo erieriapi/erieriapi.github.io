@@ -111,7 +111,8 @@
           "includeJobDescriptions": {
             "type": "string",
             "description": "Using this property allows pulling in Job Descriptions. Defaults to false but can be set to true"
-        },
+        }
+      }
                 "example": {
                   "jobTitles": [
                     "Helper Production",
