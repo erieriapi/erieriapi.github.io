@@ -129,7 +129,7 @@
                   "payPeriod": "annual",
                   "planningDate": "1/16/2026",
                   "dataAsOfDate": "4/1/2026",
-                  "includeJobDescriptions": "true"
+                  "includeJobDescriptions": "true",
                   "esic": "1000",
                   "percentiles": [
                     "25",
