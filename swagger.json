@@ -34,7 +34,7 @@
             "description": "Token generated"
           },
           "401": {
-            "description": "CORS Network failure - Please reach out to ERI"
+            "description": "1. If using Swagger UI to generate token, could be CORS Network failure or incorrect API key - Please reach out to ERI. 2. If using Postman/Bruno/etc., could be incorrect or deleted API key"
          }
       }
     }
@@ -64,7 +64,10 @@
         "responses": {
           "200": {
             "description": "Successful response"
-          }
+          },
+          "401": {
+            "description": "Unauthorized - could be expired Access Token"
+         }
         },
         "requestBody": {
           "content": {
