@@ -77,7 +77,7 @@
       "properties": {
           "jobTitles": {
             "type": "array",
-            "description": "an array of ERI job title strings (max 5 jobs). You are able to look for (Internal Jobs) as well",
+            "description": "an array of ERI job title strings (max 5 jobs). You are able to look for Internal Jobs as well",
             "items": {
               "type": "string"
             }
